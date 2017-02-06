@@ -1,3 +1,3 @@
-# 홍콩 과기대 김성훈 교수님의 수업 모두를 위한 머신러닝/딥러닝 강의 공부
-	https://hunkim.github.io/ml/
-# Python 으로 코딩.
+##	홍콩 과기대 김성훈 교수님의 수업. <br/>[모두를 위한 머신러닝/딥러닝 강의] 공부 정리
+### - [https://hunkim.github.io/ml/](https://hunkim.github.io/ml/)
+### - Python 으로 코딩.
