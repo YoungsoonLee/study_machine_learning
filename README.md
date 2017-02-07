@@ -28,7 +28,9 @@ ___
 
 + Hypothesis and Cost(Loss) function  
 
-		[image]
+		[![대체텍스트](https://github.com/YoungsoonLee/study_machine_learning/blob/master/01_Linear_Regression/hypo_cost.png)]
+		(https://github.com/YoungsoonLee/study_machine_learning/blob/master/01_Linear_Regression/hypo_cost.png "링크제목")
+		(https://github.com/YoungsoonLee/study_machine_learning/blob/master/01_Linear_Regression/hypo_cost.png)
 
 
 + Goal: Minimize cost  
