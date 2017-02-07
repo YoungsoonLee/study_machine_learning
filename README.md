@@ -26,7 +26,10 @@ ___
 
 		(H(x) - y) ^ 2 (ex.y is real data)  
 
-		[image]  
++ Hypothesis and Cost(Loss) function  
+
+		[image]
+
 
 + Goal: Minimize cost  
 
