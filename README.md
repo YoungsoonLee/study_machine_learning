@@ -2,9 +2,11 @@
 ##### - [https://hunkim.github.io/ml/](https://hunkim.github.io/ml/)
 ##### - Python(v3.5) 으로 코딩.
 
-#### 00. 개요.
-+ **machine learning 이란?**   
+#### 00. 개요.  
 ___  
+
++ **machine learning 이란?**   
+
 	+ **Supervised learning**  
   		ex, Image labeling, Email spam filter, Predicting exam score  
   		type  
@@ -13,5 +15,20 @@ ___
 		+ Letter grade(A, B, C, E and F) based on time spent - **multi-label classification**  
 
 	+ **Unsupervised learning**  
+
+### 01. Linear regression
+___  
++ Hypothesis  
+
+		H(x) = Wx + b  
+
++ Cost(Loss) function  
+
+		(H(x) - y) ^ 2 (ex.y is real data)  
+
+	
+
+
+
 
 
