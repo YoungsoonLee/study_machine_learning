@@ -26,7 +26,16 @@ ___
 
 		(H(x) - y) ^ 2 (ex.y is real data)  
 
-	
+		[image]  
+
++ Goal: Minimize cost  
+
+		minimize cost(W, b)  
+           W,b   
+    
+
+
+
 
 
 
