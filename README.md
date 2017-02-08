@@ -18,16 +18,6 @@ ___
 
 ### 01. Linear regression
 ___  
-+ Hypothesis  
-
-		H(x) = Wx + b  
-
-		* multi-variable : use Matrix  			
-
-+ Cost(Loss) function  
-
-		(H(x) - y) ^ 2 (ex.y is real data)  
-
 + Hypothesis and Cost(Loss) function  
 
 ![image](./01_Linear_Regression/img/hypo_cost.png)
