@@ -18,6 +18,7 @@ ___
 
 ### 01. Linear regression
 ___  
++ **Goal: predicting**
 + Hypothesis and Cost(Loss) function  
 
 ![image](./01_Linear_Regression/img/hypo_cost.png)
@@ -27,11 +28,24 @@ ___
 		minimize cost(W, b)  
            W,b   
 
-        Gradient descent algorithm
-    
+        Gradient descent algorithm  
 
+### 02. Logistic Classification  
+___  
++ **Goal: Spam Detection(Spam ot Ham), Facebook feed(show or hide), Credit Crad Fraud Detect(legitimate/fraud) ...**  
 
++ Hypothesis  
 
+![image](./02_Logistic_Regression/img/lh.png)  
+
++ Cost function  
+![image](./02_Logistic_Regression/img/cost.png)  
+
++ Goal: Minimize cost  
+		
+![image](./02_Logistic_Regression/img/mcost.png)  
+
+		Gradient descent algorithm  
 
 
 
