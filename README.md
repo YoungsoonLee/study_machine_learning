@@ -47,6 +47,21 @@ ___
 
 		Gradient descent algorithm  
 
+### 03. Softmax classification: Multinomial classification  -> again  
+여러개의 class가 있을때 그것을 예측.  like grade
+___  
+
++ Hypothesis  
+
+![image](./03_softmax_regression/img/hy.png)  
+
++ Cost function  
+
+![image](./03_softmax_regression/img/cost.png)  
+
++ Goal: Minimize cost  
+
+
 
 
 
