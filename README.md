@@ -61,7 +61,17 @@ ___
 
 + Goal: Minimize cost  
 
+### 04. MNIST  
 
+	...  
+
+### 05. Neural Network  
+
+	XOR  
+
+### 06. TensorBoard  
+
+![image](./05_NN/img/tb5.png)  
 
 
 
