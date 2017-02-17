@@ -73,6 +73,12 @@ ___
 
 ![image](./05_NN/img/tb5.png)  
 
-
-
-
+### 07. Better Deep learning  
+	Sigmoid -> ReLU ...  
+	Weights -> RBM (Restricted Boatman Machine, encoder/decorder)  
+			-> Xavier initialization  
+	Overfitting -> More tranining data  
+				-> Regularization  -> l2reg  
+				-> Dropout  
+	Ensemble  
+	
