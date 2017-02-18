@@ -81,4 +81,26 @@ ___
 				-> Regularization  -> l2reg  
 				-> Dropout  
 	Ensemble  
-	
+
+### 08. CNN (Convolutional Neural Network)  
+	filters  
+		Weights(depth), how many focus at once  
+		output one value  
+
+	how many numbers can we get? (how many output with filter)  
+		Output size:
+			( (N - F) / stride ) + 1  
+
+	Pad  
+		block to small image , know the edge  
+		add zero pad the border  
+		make same input size and output size  
+
+	How many weight variables?  
+
+	Pooling(sampling)  
+		why sampling? -> make layer to smaller  
+		max pooling  
+
+### 09. RNN  (Recurrent Neural Network)  
+
