@@ -10,11 +10,13 @@ ___
 	+ **Supervised learning**  
   		ex, Image labeling, Email spam filter, Predicting exam score  
   		type  
-  		+ Predicting final exam score based on time spent - **regression**  
-		+ Pass/non-pass based on time spent - **binary classification**  
-		+ Letter grade(A, B, C, E and F) based on time spent - **multi-label classification**  
+  			+ Predicting final exam score based on time spent - **regression**  
+			+ Pass/non-pass based on time spent - **binary classification**  
+			+ Letter grade(A, B, C, E and F) based on time spent - **multi-label classification**  
 
 	+ **Unsupervised learning**  
+		un-labeled data  
+
 
 ### 01. Linear regression
 ___  

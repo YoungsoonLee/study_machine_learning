@@ -6,6 +6,9 @@ xy = np.loadtxt('train.txt', unpack=True, dtype='float32')
 x_data = xy[0:-1]
 y_data = xy[-1]
 
+print(len(x_data))
+print(len(y_data))
+
 X = tf.placeholder(tf.float32)
 Y = tf.placeholder(tf.float32)
 

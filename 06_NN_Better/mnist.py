@@ -10,6 +10,9 @@ training_epochs = 25
 batch_size = 100
 display_step = 10
 
+# print(mnist.test.images)
+print(mnist.test.labels)
+
 """
 # tf graph input
 x = tf.placeholder("float", [None, 784]) # mnist data image of shape 28*28*784

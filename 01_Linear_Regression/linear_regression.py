@@ -7,8 +7,8 @@ y_data = [1., 2., 3.]
 # try to find values for W and b that compute y_data = W * x_data + b
 # (We know that W should be 1 and b 0, butTensorflow will
 # figure that out for us.)
-W = tf.Variable(tf.random_normal([1], -1.0, 1.0))
-b = tf.Variable(tf.random_normal([1], -1.0, 1.0))
+W = tf.Variable(tf.random_uniform([1], -1.0, 1.0))
+b = tf.Variable(tf.random_uniform([1], -1.0, 1.0))
 
 # Our hypothesis
 hypothesis = W * x_data + b

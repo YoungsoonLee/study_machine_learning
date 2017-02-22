@@ -1,25 +1,25 @@
 import tensorflow as tf
+import random
 
-
-x_data = [1., 2., 3.]
-y_data = [1., 2., 3.]
+# x_data = [1., 2., 3.]
+# y_data = [1., 2., 3.]
+base_num = [ x for x in range(1,50)]
+x_data = random.sample(base_num, 7)
+print(x_data)
+y_data = [5,17,19,25,31,38,46]
 
 # try to find values for W and b that compute y_data = W * x_data + b
 # (We know that W should be 1 and b 0, butTensorflow will
 # figure that out for us.)
-W = tf.Variable(tf.random_uniform([1], -1.0, 1.0))
-b = tf.Variable(tf.random_uniform([1], -1.0, 1.0))
-
-# place holder
-X = tf.placeholder(tf.float32)
-Y = tf.placeholder(tf.float32)
+W = tf.Variable(tf.random_normal([1], -1.0, 1.0))
+b = tf.Variable(tf.random_normal([1], -1.0, 1.0))
 
 # Our hypothesis
-hypothesis = W * X + b
+hypothesis = W * x_data + b
 
 # Simplified cost function
 # get avg
-cost = tf.reduce_mean(tf.square(hypothesis - Y))
+cost = tf.reduce_mean(tf.square(hypothesis - y_data))
 
 # Minimize
 a = tf.Variable(0.1) # learning rate, alpha
@@ -35,9 +35,6 @@ sess.run(init)
 
 # fit the line
 for step in range(2001):
-	sess.run(train, feed_dict={X:x_data, Y:y_data})
+	sess.run(train)
 	if step % 20 == 0:
-		print(step, sess.run(cost, feed_dict={X:x_data, Y:y_data}), sess.run(W), sess.run(b))
-
-print(sess.run(hypothesis, feed_dict={X:5}) )
-print(sess.run(hypothesis, feed_dict={X:2.5}) )
+		print(step, sess.run(cost), sess.run(W), sess.run(b))

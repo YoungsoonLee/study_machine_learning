@@ -5,8 +5,8 @@ xy = np.loadtxt('train.txt', unpack=True, dtype='float32')
 x_data = xy[0:-1]
 y_data = xy[-1]
 
-print(x_data)
-print(y_data)
+print(len(x_data))
+print(len(y_data))
 
 X = tf.placeholder(tf.float32)
 Y = tf.placeholder(tf.float32)
@@ -25,18 +25,16 @@ a = tf.Variable(0.1)  # learning rate, alpha. step size
 optimizer = tf.train.GradientDescentOptimizer(a)
 train = optimizer.minimize(cost)
 
-# init = tf.initialize_all_variables()
-init = tf.global_variables_initializer()
+init = tf.initialize_all_variables()
 
 sess = tf.Session()
 sess.run(init)
 
-for step in range(4001):
+for step in range(2001):
 	sess.run(train, feed_dict={X:x_data, Y:y_data})
-	# print(step, sess.run(cost, feed_dict={X:x_data, Y:y_data}), sess.run(W))
-	
 	if step % 20 == 0:
 		print(step, sess.run(cost, feed_dict={X:x_data, Y:y_data}), sess.run(W))
-	
+
 
 print('-'*50)
+
