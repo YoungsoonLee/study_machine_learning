@@ -13,17 +13,17 @@ y = my_data[:, 4:]
 base_number = [x for x in range(1,50)]
 for i in range(0,len(y)):
 	output += str(1)+'\t' # bias
-	rnd = random.sample(base_number, 8)
+	rnd = random.sample(base_number, 7)
 	for i in range(0, len(rnd)):
 		output += str(rnd[i])+'\t'
-		if i == 7:
+		if i == 6:
 			output += '0'+'\n'
 
 # make y_data
 for j in range(0,len(y)):
 	output += str(1)+'\t' # bias
-	for i in range(0, 8):			
-			if i == 7:
+	for i in range(0, 7):			
+			if i == 6:
 				output += str(y[j][i])+'\t'+'1'
 				output += '\n'
 			else:

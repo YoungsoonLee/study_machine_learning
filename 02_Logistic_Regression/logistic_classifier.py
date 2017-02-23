@@ -19,7 +19,7 @@ h = tf.matmul(W, X)
 hypothesis = tf.div(1., 1.+tf.exp(-h))  # sigmoid
 
 # cost function
-cost = -tf.reduce_mean(Y*tf.log(hypothesis) + (1-Y)*tf.log(1-hypothesis))
+cost = -tf.reduce_mean( Y*tf.log(hypothesis) + (1-Y)*tf.log(1-hypothesis))
 
 # minimize
 a = tf.Variable(0.1)  # learning rate, alpha. step size

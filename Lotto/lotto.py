@@ -1,24 +1,24 @@
 import tensorflow as tf
 import numpy as np
+import random
 
 xy = np.loadtxt('train.txt', unpack=True, dtype='float32')
 x_data = xy[0:-1]
 y_data = xy[-1]
 
-print(len(x_data))
-print(len(y_data))
-
 X = tf.placeholder(tf.float32)
 Y = tf.placeholder(tf.float32)
 
-W = tf.Variable(tf.random_uniform([1,len(x_data)], -1.0, 1.0)) 
+W = tf.Variable(tf.random_uniform([4742, 8], -50.0, 50.0))  # need to smae form with x ~! 
 
-# our hypothesis
-h = tf.matmul(W, X)
-hypothesis = tf.div(1., 1.+tf.exp(-h))  # sigmoid
+# sigmoid
+#h = tf.matmul(W, X)
+#hypothesis = tf.div(1., 1.+tf.exp(-h))  # sigmoid
+#cost = -tf.reduce_mean(Y*tf.log(hypothesis) + (1-Y)*tf.log(1-hypothesis))
 
-# cost function
-cost = -tf.reduce_mean(Y*tf.log(hypothesis) + (1-Y)*tf.log(1-hypothesis))
+# Simplified
+hypothesis = tf.matmul(W, X)  # muliple matrix Simple~!!!
+cost = tf.reduce_mean(tf.square(hypothesis - y_data))
 
 # minimize
 a = tf.Variable(0.1)  # learning rate, alpha. step size
@@ -37,4 +37,26 @@ for step in range(2001):
 
 
 print('-'*50)
+
+# get the number ~!!!!
+go = True
+result =[]
+step = 0
+base_number = [x for x in range(1,50)]
+while go:
+	rnd = random.sample(base_number, 7)
+	i_data = [1]
+	i_data += rnd
+	
+	a = sess.run(hypothesis, feed_dict={X:[ i_data ]}) > 0.5
+	if a.all():
+		result = i_data.copy()
+		go = False # break
+
+	print(step, i_data, a)
+	step += 1
+
+print('-'*50)
+print(result)
+
 
