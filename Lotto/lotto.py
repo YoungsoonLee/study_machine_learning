@@ -9,7 +9,7 @@ y_data = xy[-1]
 X = tf.placeholder(tf.float32)
 Y = tf.placeholder(tf.float32)
 
-W = tf.Variable(tf.random_uniform([4742, 8], -50.0, 50.0))  # need to smae form with x ~! 
+W = tf.Variable(tf.random_uniform([4742, 8], -1.0, 1.0))  # need to smae form with x ~! 
 
 # sigmoid
 #h = tf.matmul(W, X)
@@ -47,8 +47,9 @@ while go:
 	rnd = random.sample(base_number, 7)
 	i_data = [1]
 	i_data += rnd
-	
-	a = sess.run(hypothesis, feed_dict={X:[ i_data ]}) > 0.5
+	i_data = np.array(i_data)
+
+	a = sess.run(hypothesis, feed_dict={X: i_data.reshape(8, 1) }) > 0.5
 	if a.all():
 		result = i_data.copy()
 		go = False # break
