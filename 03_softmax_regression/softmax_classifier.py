@@ -6,10 +6,10 @@ x_data = np.transpose(xy[0:3])
 y_data = np.transpose(xy[3:])  # y_data is vector
 
 # tf graph input
-X = tf.placeholder('float', [None, 3])  # x1, x2 and 1 (1 is for bias)
-Y = tf.placeholder('float', [None, 3])  # A, B, C => 3 classes
+X = tf.placeholder('float', [None, 3])  # x1, x2 and 1 (1 is for bias), None mesn that we don't know how many rows
+Y = tf.placeholder('float', [None, 3])  # A, B, C => 3 classes, None mesn that we don't know how many rows
 # set model weights
-W = tf.Variable(tf.zeros([3, 3]))  # 3x3 matrix
+W = tf.Variable(tf.zeros([3, 3]))  # 3x3 matrix (x_data * y_data)
 
 # Construct model
 hypothesis = tf.nn.softmax(tf.matmul(X, W)) # softmax
@@ -37,7 +37,7 @@ with tf.Session() as sess:
 
 	# test & one-hot encoding
 	a = sess.run(hypothesis, feed_dict={X:[[1, 11, 7]]})
-	print(a, sess.run(tf.arg_max(a, 1)))
+	print(a, sess.run(tf.arg_max(a, 1)))  # one hot encoding
 
 	b = sess.run(hypothesis, feed_dict={X:[[1, 3, 4]]})
 	print(b, sess.run(tf.arg_max(b, 1)))
