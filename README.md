@@ -34,7 +34,7 @@ ___
 
 ### 02. Logistic Classification  
 ___  
-+ **Goal: Spam Detection(Spam ot Ham), Facebook feed(show or hide), Credit Crad Fraud Detect(legitimate/fraud) ...**  
++ **Goal: Spam Detection(Spam ot Ham), Facebook feed(show or hide), Credit Crad Fraud Detect(legitimate/fraud), Stock...**  
 
 + Hypothesis  
 
@@ -76,12 +76,18 @@ ___
 ![image](./05_NN/img/tb5.png)  
 
 ### 07. Better Deep learning  
+	learning_rate-> affect to cost step
+	Data Preprocessing -> Standardzation ex, X_std[:,0] = (X[:,0] - X[:,0].mean()) / X[:,0].std()
+	Overfitting -> More tranining data  
+				-> reduce the number of features
+				-> Regularization(not have too big numbers in the weight) -> l2reg  
+				-> Dropout  
+	Online learning -> 
+
+
 	Sigmoid -> ReLU ...  
 	Weights -> RBM (Restricted Boatman Machine, encoder/decorder)  
 			-> Xavier initialization  
-	Overfitting -> More tranining data  
-				-> Regularization  -> l2reg  
-				-> Dropout  
 	Ensemble  
 
 ### 08. CNN (Convolutional Neural Network)  

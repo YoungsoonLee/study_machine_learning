@@ -15,7 +15,7 @@ W = tf.Variable(tf.zeros([3, 3]))  # 3x3 matrix (x_data * y_data)
 hypothesis = tf.nn.softmax(tf.matmul(X, W)) # softmax
 
 # Minimize error using cross entropy
-learning_rate = 0.001
+learning_rate = 0.001 # affect to cost step
 
 # Cross entropy
 cost = tf.reduce_mean(-tf.reduce_sum(Y*tf.log(hypothesis), reduction_indices=1))
