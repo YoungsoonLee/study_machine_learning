@@ -70,6 +70,12 @@ ___
 ### 05. Neural Network  
 
 	XOR  
+	
+	How can we learn W, and b from trading data?  -> !!!  
+		Back propagarion(chain rule)  
+![image](./05_NN/img/bp1.png)  
+![image](./05_NN/img/bp2.png)  
+
 
 ### 06. TensorBoard  
 
@@ -86,7 +92,7 @@ ___
 
 
 	Sigmoid -> ReLU ...  
-	Weights -> RBM (Restricted Boatman Machine, encoder/decorder)  
+	Weights -> RBM (Restricted Boltzmann Machine, encoder/decorder)  
 			-> Xavier initialization  
 	Ensemble  
 

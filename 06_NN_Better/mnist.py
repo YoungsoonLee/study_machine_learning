@@ -1,3 +1,4 @@
+# reLU~!!!!!
 import tensorflow as tf
 import numpy as np
 import input_data
@@ -11,7 +12,7 @@ batch_size = 100
 display_step = 10
 
 # print(mnist.test.images)
-print(mnist.test.labels)
+# print(mnist.test.labels)
 
 """
 # tf graph input
@@ -47,6 +48,7 @@ B2 = tf.Variable(tf.random_normal([256]))
 B3 = tf.Variable(tf.random_normal([10]))
 
 # construct
+# reLU~!!!!!
 L1 = tf.nn.relu(tf.add(tf.matmul(X, W1), B1))
 L2 = tf.nn.relu(tf.add(tf.matmul(L1, W2), B2))  # hidden layer
 activation = tf.add(tf.matmul(L2, W3), B3) # No need to use softman here

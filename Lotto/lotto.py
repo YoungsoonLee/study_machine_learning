@@ -9,7 +9,7 @@ y_data = xy[-1]
 X = tf.placeholder(tf.float32)
 Y = tf.placeholder(tf.float32)
 
-W = tf.Variable(tf.random_uniform([4742, 8], -1.0, 1.0))  # need to smae form with x ~! 
+W = tf.Variable(tf.random_uniform([4742+5, 8], -1.0, 1.0))  # need to smae form with x ~! 
 
 # sigmoid
 #h = tf.matmul(W, X)

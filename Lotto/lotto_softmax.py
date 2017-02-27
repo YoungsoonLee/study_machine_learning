@@ -1,1 +1,0 @@
-# x data is 8, y data is 49(1 -49) to convert 0 or 1
