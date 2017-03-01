@@ -30,7 +30,7 @@ init = tf.initialize_all_variables()
 sess = tf.Session()
 sess.run(init)
 
-for step in range(2001):
+for step in range(4001):
 	sess.run(train, feed_dict={X:x_data, Y:y_data})
 	if step % 20 == 0:
 		print(step, sess.run(cost, feed_dict={X:x_data, Y:y_data}), sess.run(W))
@@ -38,6 +38,7 @@ for step in range(2001):
 
 print('-'*50)
 
+"""
 # get the number ~!!!!
 go = True
 result =[]
@@ -59,5 +60,5 @@ while go:
 
 print('-'*50)
 print(result)
-
+"""
 

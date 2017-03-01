@@ -1,6 +1,6 @@
 ##	홍콩 과기대 김성훈 교수님의 수업. <br/>[모두를 위한 머신러닝/딥러닝 강의] 공부 정리
 ##### - [https://hunkim.github.io/ml/](https://hunkim.github.io/ml/)
-##### - Python(v3.5) 으로 코딩.
+##### - Python(v3.5), window 10 64bit 환경에서 코딩.
 
 #### 00. 개요.  
 ___  
@@ -77,29 +77,27 @@ ___
 ![image](./05_NN/img/bp2.png)  
 
 
-### 06. TensorBoard  
+### 06. TensorBoard  & Better Deep learning  
 
 ![image](./05_NN/img/tb5.png)  
 
-### 07. Better Deep learning  
 	learning_rate-> affect to cost step
 	Data Preprocessing -> Standardzation ex, X_std[:,0] = (X[:,0] - X[:,0].mean()) / X[:,0].std()
-	Overfitting -> More tranining data  
-				-> reduce the number of features
-				-> Regularization(not have too big numbers in the weight) -> l2reg  
-				-> Dropout  
 	Online learning -> 
-
 
 	Sigmoid -> ReLU ...  
 	Weights -> RBM (Restricted Boltzmann Machine, encoder/decorder)  
 			-> Xavier initialization  
+	Overfitting -> More tranining data  
+				-> reduce the number of features
+				-> Regularization(not have too big numbers in the weight) -> l2reg  
+				-> Dropout  
 	Ensemble  
 
-### 08. CNN (Convolutional Neural Network)  
+### 07. CNN (Convolutional Neural Network)  
 	filters  
 		Weights(depth), how many focus at once  
-		output one value  
+		output is one value  
 
 	how many numbers can we get? (how many output with filter)  
 		Output size:
@@ -111,10 +109,42 @@ ___
 		make same input size and output size  
 
 	How many weight variables?  
+		ex. 5*5*3*6
 
 	Pooling(sampling)  
 		why sampling? -> make layer to smaller  
 		max pooling  
 
-### 09. RNN  (Recurrent Neural Network)  
+### 08. RNN  (Recurrent Neural Network)  
+	Sequence data  
+	state
+	
+	ex.
+		language Modeling  
+		Speech Recognition  
+		Machine Translation  
+		Bot  
+		image/video captioning  
+	
+	Algol:
+		Long Short Term Memory (LSTM)  
+		GRU  
+
+### 09. Reinforcement Learning  
+	Environment  
+	Actor(Agent)  
+	Action ->  
+			<- state, reward  
+
+### 10. Q-Learning  
+	Q function  
+		Q(state, action) -> quality(reward)  
+	Policy  
+		Max Q = maxQ(s, a)  
+		π = argmaxQ(s, a)  
+	How learn Q?
+		Q(s, a) <- r + maxQ(s`, a`)  
+	
+
+
 
