@@ -144,7 +144,39 @@ ___
 		π = argmaxQ(s, a)  
 	How learn Q?
 		Q(s, a) <- r + maxQ(s`, a`)  
+	Exploit VS Exploration  
+		E-greedy  
+			decaying E-greedy  
+		add random noise  
+	Discounted reward  
+		Q(s, a) <- r + γmaxQ(s`, a`)  
+	Non-deterministic(Stochastic)    
+		learning rate  
+		α = 0.1
+			Q(s, a) <- (1-α)Q(s, a) + α [r + γmaxQ(s`, a`) ]  
+			Q(s, a) <- Q(s, a) + α [r + γmaxQ(s`, a`) - Q(s, a)]  
+
+### 11. Q-Network  
+	Q-Table?  
+		too big in real world  
+	Q-function network  
+		input: state
+		output: all action  
+
+### 12. DQN  
+	Q-Network problems
+		1. correlations sample  
+		2. non-stationary targets  
+	Solve  
+		1. Go deep  
+		2. experience reply -> store result to buffer and then batch randomly  
+		3. Separate target network  
+		
+
+
 	
+	
+
 
 
 

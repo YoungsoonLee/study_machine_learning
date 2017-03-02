@@ -38,7 +38,6 @@ for step in range(4001):
 
 print('-'*50)
 
-"""
 # get the number ~!!!!
 go = True
 result =[]
@@ -60,5 +59,4 @@ while go:
 
 print('-'*50)
 print(result)
-"""
 
