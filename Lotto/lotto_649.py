@@ -2,14 +2,14 @@ import tensorflow as tf
 import numpy as np
 import random
 
-xy = np.loadtxt('train.txt', unpack=True, dtype='float32')
+xy = np.loadtxt('train_649.txt', unpack=True, dtype='float32')
 x_data = xy[0:-1]
 y_data = xy[-1]
 
 X = tf.placeholder(tf.float32)
 Y = tf.placeholder(tf.float32)
 
-W = tf.Variable(tf.random_uniform([4777, 8], -1.0, 1.0))  # need to smae form with x ~! 
+W = tf.Variable(tf.random_uniform([3544, 7], -1.0, 1.0))  # need to smae form with x ~! 
 
 # sigmoid
 #h = tf.matmul(W, X)
@@ -44,12 +44,12 @@ result =[]
 step = 0
 base_number = [x for x in range(1,50)]
 while go:
-	rnd = random.sample(base_number, 7)
+	rnd = random.sample(base_number, 6)
 	i_data = [1]
 	i_data += rnd
 	i_data = np.array(i_data)
 
-	a = sess.run(hypothesis, feed_dict={X: i_data.reshape(8, 1) }) > 0.5
+	a = sess.run(hypothesis, feed_dict={X: i_data.reshape(7, 1) }) > 0.5
 	if a.all():
 		result = i_data.copy()
 		go = False # break
